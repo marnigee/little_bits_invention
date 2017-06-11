@@ -1,5 +1,4 @@
 class Invention < ActiveRecord::Base
-  has_many :bits, through: :manifests
   validates :title, presence: true
   validates :description, presence: true
   validates :title, length: { maximum: 255, too_long: "255 characters is the maximum allowed" }
